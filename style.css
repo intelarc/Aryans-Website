@@ -1,4 +1,45 @@
-html {
-  height: 100%;
-  width: 100%;
+body {
+  font-family: monospace;
+  background: #000;
+  color: #fff;
+  margin: 40px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+}
+
+h2 {
+  color: #888;
+  font-size: 1.1em;
+  margin: 30px 0 15px 0;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #0af;
+}
+
+.nav {
+  margin-bottom: 40px;
+}
+
+.nav a {
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  margin-top: 60px;
+  color: #555;
+  font-size: 0.9em;
 }
