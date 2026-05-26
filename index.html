@@ -78,13 +78,13 @@
     animation: rise 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.1s forwards;
     color: #f5f5f0;
     text-shadow: 0 0 80px rgba(255, 255, 255, 0.06);
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
+    font-kerning: normal;
+    font-feature-settings: "kern" 1;
   }
 
-  .wordmark .tilt {
-    display: inline;
+  .wordmark .e-kern {
+    margin-left: -0.035em;
+    margin-right: -0.045em;
   }
 
   /* scattered :3 cat faces */
@@ -115,10 +115,6 @@
   .cat:nth-child(7)  { top: 48%;   right: 3%;  font-size: clamp(28px, 3.5vw, 56px); transform: rotate(13deg); opacity: 0.55; }
   .cat:nth-child(8)  { top: 3%;    left: 33%;  font-size: clamp(24px, 3vw, 48px);  transform: rotate(-5deg); opacity: 0.6;  }
   .cat:nth-child(9)  { bottom: 4%; left: 40%;  font-size: clamp(28px, 3.5vw, 56px); transform: rotate(6deg);  opacity: 0.6;  }
-
-  @media (max-width: 600px) {
-    .cat:nth-child(6), .cat:nth-child(7), .cat:nth-child(8) { display: none; }
-  }
 
   .links {
     width: 100%;
@@ -180,10 +176,41 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  @media (max-width: 420px) {
-    .container { padding: 64px 20px 40px; }
-    .wordmark { margin-bottom: 56px; }
-    .link { padding: 16px 18px; font-size: 14px; }
+  @media (max-width: 600px) {
+    .container {
+      padding: 56px 20px 56px;
+    }
+
+    .wordmark {
+      font-size: clamp(56px, 16vw, 84px);
+      letter-spacing: -0.05em;
+      margin-bottom: 52px;
+    }
+
+    .links { gap: 9px; }
+
+    .link {
+      padding: 16px 18px;
+      font-size: 14px;
+      border-radius: 13px;
+    }
+
+    .link-icon { width: 17px; height: 17px; }
+    .link-arrow { width: 12px; height: 12px; }
+
+    /* re-position cats so they sit in the empty top/bottom bands
+       and don't crash into the centered content */
+    .cat:nth-child(1) { top: 3.5%;    left: 6%;    font-size: 58px; transform: rotate(-14deg); opacity: 0.85; }
+    .cat:nth-child(2) { top: 11%;     left: 58%;   font-size: 44px; transform: rotate(9deg);   opacity: 0.75; }
+    .cat:nth-child(3) { top: 5%;      right: 6%;   font-size: 52px; transform: rotate(-6deg);  opacity: 0.85; }
+    .cat:nth-child(4) { bottom: 9%;   left: 5%;    font-size: 62px; transform: rotate(-12deg); opacity: 0.85; }
+    .cat:nth-child(5) { bottom: 4%;   right: 7%;   font-size: 50px; transform: rotate(12deg);  opacity: 0.8;  }
+    .cat:nth-child(8) { top: 14%;     left: 5%;    font-size: 32px; transform: rotate(-22deg); opacity: 0.55; }
+    .cat:nth-child(9) { bottom: 14%;  right: 6%;   font-size: 34px; transform: rotate(8deg);   opacity: 0.55; }
+
+    /* kill the side-of-center cats on mobile - they'd overlap content */
+    .cat:nth-child(6),
+    .cat:nth-child(7) { display: none; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -211,7 +238,7 @@
 
 <main class="container">
 
-  <h1 class="wordmark">MEOWPCS</h1>
+  <h1 class="wordmark">M<span class="e-kern">E</span>OWPCS</h1>
 
   <nav class="links" aria-label="Links">
 
