@@ -73,7 +73,7 @@
     line-height: 0.9;
     letter-spacing: -0.055em;
     text-align: center;
-    margin-bottom: 72px;
+    margin-bottom: 60px;
     color: #f5f5f0;
     text-shadow: 0 0 80px rgba(255, 255, 255, 0.06);
     font-kerning: normal;
@@ -104,15 +104,15 @@
     text-shadow: 0 0 22px rgba(255, 255, 255, 0.15);
   }
 
-  .cat:nth-child(1)  { top: 7%;    left: 7%;   font-size: clamp(48px, 6vw, 96px); transform: rotate(-14deg); opacity: 0.9;  }
-  .cat:nth-child(2)  { top: 16%;   left: 48%;  font-size: clamp(36px, 4.5vw, 72px); transform: rotate(8deg);  opacity: 0.85; }
-  .cat:nth-child(3)  { top: 9%;    right: 7%;  font-size: clamp(44px, 5.5vw, 88px); transform: rotate(-7deg); opacity: 0.88; }
-  .cat:nth-child(4)  { bottom: 12%; left: 8%;  font-size: clamp(48px, 6.5vw, 104px); transform: rotate(-12deg); opacity: 0.9; }
+  .cat:nth-child(1)  { top: 7%;    left: 7%;   font-size: clamp(48px, 6vw, 96px); transform: rotate(-14deg); opacity: 0.85; }
+  .cat:nth-child(2)  { top: 14%;   left: 56%;  font-size: clamp(36px, 4.5vw, 68px); transform: rotate(8deg);  opacity: 0.5;  }
+  .cat:nth-child(3)  { top: 9%;    right: 7%;  font-size: clamp(44px, 5.5vw, 88px); transform: rotate(-7deg); opacity: 0.85; }
+  .cat:nth-child(4)  { bottom: 9%; left: 6%;   font-size: clamp(44px, 5.5vw, 88px); transform: rotate(-12deg); opacity: 0.85; }
   .cat:nth-child(5)  { bottom: 8%;  right: 9%; font-size: clamp(40px, 5vw, 80px); transform: rotate(11deg); opacity: 0.85; }
-  .cat:nth-child(6)  { top: 42%;   left: 3%;   font-size: clamp(28px, 3.5vw, 56px); transform: rotate(-18deg); opacity: 0.55; }
-  .cat:nth-child(7)  { top: 48%;   right: 3%;  font-size: clamp(28px, 3.5vw, 56px); transform: rotate(13deg); opacity: 0.55; }
-  .cat:nth-child(8)  { top: 3%;    left: 33%;  font-size: clamp(24px, 3vw, 48px);  transform: rotate(-5deg); opacity: 0.6;  }
-  .cat:nth-child(9)  { bottom: 4%; left: 40%;  font-size: clamp(28px, 3.5vw, 56px); transform: rotate(6deg);  opacity: 0.6;  }
+  .cat:nth-child(6)  { top: 42%;   left: 3%;   font-size: clamp(28px, 3.5vw, 52px); transform: rotate(-18deg); opacity: 0.5;  }
+  .cat:nth-child(7)  { top: 48%;   right: 3%;  font-size: clamp(28px, 3.5vw, 52px); transform: rotate(13deg); opacity: 0.5;  }
+  .cat:nth-child(8)  { top: 3%;    left: 33%;  font-size: clamp(24px, 3vw, 48px);  transform: rotate(-5deg); opacity: 0.5;  }
+  .cat:nth-child(9)  { bottom: 4%; left: 40%;  font-size: clamp(28px, 3.5vw, 52px); transform: rotate(6deg);  opacity: 0.5;  }
 
   .links {
     width: 100%;
@@ -137,7 +137,6 @@
     transition: none;
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(8px);
   }
 
   .link-left {
@@ -199,12 +198,12 @@
     /* re-position cats so they sit in the empty top/bottom bands
        and don't crash into the centered content */
     .cat:nth-child(1) { top: 3.5%;    left: 6%;    font-size: 58px; transform: rotate(-14deg); opacity: 0.85; }
-    .cat:nth-child(2) { top: 11%;     left: 58%;   font-size: 44px; transform: rotate(9deg);   opacity: 0.75; }
+    .cat:nth-child(2) { top: 11%;     left: 58%;   font-size: 42px; transform: rotate(9deg);   opacity: 0.5;  }
     .cat:nth-child(3) { top: 5%;      right: 6%;   font-size: 52px; transform: rotate(-6deg);  opacity: 0.85; }
-    .cat:nth-child(4) { bottom: 9%;   left: 5%;    font-size: 62px; transform: rotate(-12deg); opacity: 0.85; }
-    .cat:nth-child(5) { bottom: 4%;   right: 7%;   font-size: 50px; transform: rotate(12deg);  opacity: 0.8;  }
-    .cat:nth-child(8) { top: 14%;     left: 5%;    font-size: 32px; transform: rotate(-22deg); opacity: 0.55; }
-    .cat:nth-child(9) { bottom: 14%;  right: 6%;   font-size: 34px; transform: rotate(8deg);   opacity: 0.55; }
+    .cat:nth-child(4) { bottom: 9%;   left: 5%;    font-size: 58px; transform: rotate(-12deg); opacity: 0.85; }
+    .cat:nth-child(5) { bottom: 4%;   right: 7%;   font-size: 50px; transform: rotate(12deg);  opacity: 0.85; }
+    .cat:nth-child(8) { top: 22%;     left: 22%;   font-size: 30px; transform: rotate(-22deg); opacity: 0.5;  }
+    .cat:nth-child(9) { bottom: 18%;  right: 14%;  font-size: 32px; transform: rotate(8deg);   opacity: 0.5;  }
 
     /* kill the side-of-center cats on mobile - they'd overlap content */
     .cat:nth-child(6),
