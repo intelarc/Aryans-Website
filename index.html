@@ -134,10 +134,12 @@
     font-size: 14.5px;
     font-weight: 500;
     letter-spacing: -0.005em;
-    transition: none;
+    transition: background 0.18s ease, border-color 0.18s ease;
     position: relative;
     overflow: hidden;
   }
+
+  .link:hover { background: var(--card-hover); border-color: var(--border-hover); }
 
   .link-left {
     display: flex;
@@ -168,9 +170,30 @@
     stroke-linejoin: round;
   }
 
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(14px); }
-    to { opacity: 1; transform: translateY(0); }
+  /* small site link pinned at the bottom */
+  .site-link {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 4;
+  }
+
+  .site-link a {
+    font-size: 12.5px;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.15s ease;
+  }
+
+  .site-link a:hover { color: var(--fg); }
+
+  .site-link a:focus-visible {
+    outline: 1px solid var(--muted);
+    outline-offset: 4px;
+    border-radius: 2px;
   }
 
   @media (max-width: 600px) {
@@ -194,6 +217,9 @@
 
     .link-icon { width: 17px; height: 17px; }
     .link-arrow { width: 12px; height: 12px; }
+
+    .site-link { bottom: 22px; }
+    .site-link a { font-size: 12px; }
 
     /* re-position cats so they sit in the empty top/bottom bands
        and don't crash into the centered content */
@@ -264,6 +290,10 @@
     </a>
 
   </nav>
+
+  <footer class="site-link">
+    <a href="https://aryanpcs.com" target="_blank" rel="noopener noreferrer">aryanpcs.com</a>
+  </footer>
 
 </main>
 </body>
